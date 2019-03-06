@@ -1,0 +1,141 @@
+﻿@using CarRental.BLL.Entities
+@model Cars
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <table class="table table-striped">
+                <tr>
+
+                    <td>
+                        @Html.Label("Marka:")
+                    </td>
+                    <td>
+                        @Model.Brand
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Model:")
+                    </td>
+                    <td>
+                        @Model.CarModel
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Data produkcji:")
+                    </td>
+                    <td>
+                        @Model.ProdDate
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Koszt wynajmu:")
+                    </td>
+                    <td>
+                        @Model.RentPrice
+                    </td>
+                <tr>
+                    <td>
+                        @Html.Label("Kaucja:")
+                    </td>
+                    <td>
+                        @Model.Bail
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Liczba drzwi:")
+                    </td>
+                    <td>
+                        @Model.Doors
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Typ:")
+                    </td>
+                    <td>
+                        @Model.Type
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Pojemnosc:")
+                    </td>
+                    <td>
+                        @Model.Capacity
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Paliwo:")
+                    </td>
+                    <td>
+                        @Model.Fuel
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Klimatyzacja:")
+                    </td>
+                    <td>
+                        @Model.Clim
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Nawigacja:")
+                    </td>
+                    <td>
+                        @Model.Navi
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Naped:")
+                    </td>
+                    <td>
+                        @Model.DriveType
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Tapicerka:")
+                    </td>
+                    <td>
+                        @Model.Upholestry
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Moc:")
+                    </td>
+                    <td>
+                        @Model.Horsepower
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Opis:")
+                    </td>
+                    <td>
+                        @Model.Description
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+@Html.ActionLink("Wróć", "Index", "Cars", (object)null, new { @class = "btn btn-primary" })

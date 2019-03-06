@@ -1,0 +1,596 @@
+﻿@using CarRental.BLL.Entities
+@model Cars
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+
+</head>
+<body>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <!-- BEGIN PRODUCTS -->
+            <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="~/images/miniMustang.jpg" alt="...">
+                    <h4>Ford Mustang</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <p>Rok produkcji: 2017</p>
+
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">1000zł</p>
+
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+
+                            <button class="btn btn-success right"
+                                    data-toggle="modal" data-target="#mustang">
+                                Szczegóły
+                            </button>
+
+                        </div>
+
+                    </div>
+                </span>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="~/images/audi/audiMini.jpg" alt="...">
+                    <h4>Audi A4</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Rok produkcji: 2014 </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">500zł</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <button class="btn btn-success right"
+                                    data-toggle="modal" data-target="#audi">
+                                Szczegóły
+                            </button>
+                        </div>
+
+                    </div>
+                </span>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="~/images/focus/focusMini.jpg" alt="...">
+
+                    <h4>Ford Focus</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Rok produkcji: 2010 </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">200zł</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <button class="btn btn-success right"
+                                    data-toggle="modal" data-target="#focus">
+                                Szczegóły
+                            </button>
+                        </div>
+
+                    </div>
+                </span>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="~/images/kia/kiaMini.jpg" alt="...">
+
+                    <h4>Kia Ceed</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Rok produkcji: 2013 </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">300zł</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <button class="btn btn-success right"
+                                    data-toggle="modal" data-target="#kia">
+                                Szczegóły
+                            </button>
+                        </div>
+
+                    </div>
+                </span>
+            </div>
+            <!-- END PRODUCTS -->
+        </div>
+    </div>
+    <!-- Mustang -->
+    <div class="modal fade product_view" id="mustang" data-backdrop="false">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                    <h3 class="modal-title">Ford Mustang</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 product_img">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/mustang/must1.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/mustang/must2.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/images/mustang/must3.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                        <div class="col-md-6 product_content">
+
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+
+                            </div>
+                            <p></p>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <td>Marka:</td>
+                                            <td>Ford</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Model:</td>
+                                            <td>Mustang</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data produkcji:</td>
+                                            <td>2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Koszt wynajmu:</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kaucja</td>
+                                            <td>5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Liczba drzwi:</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Typ:</td>
+                                            <td>Coupe</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pojemność:</td>
+                                            <td>5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paliwo:</td>
+                                            <td>benzyna</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Klimatyzacja:</td>
+                                            <td>tak</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nawigacja:</td>
+                                            <td>tak</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Napęd:</td>
+                                            <td>tył</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tapicerka:</td>
+                                            <td>skóra</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Moc:</td>
+                                            <td>435</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-4 col-sm-12">
+
+                                </div>
+                                <!-- end col -->
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Audi -->
+    <div class="modal fade product_view" id="audi" data-backdrop="false">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                    <h3 class="modal-title">Audi A4</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 product_img">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/audi/audi3.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/audi/audi1.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/images/audi/audi2.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="col-md-6 product_content">
+
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+
+                            </div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>Marka:</td>
+                                    <td>Audi</td>
+                                </tr>
+                                <tr>
+                                    <td>Model:</td>
+                                    <td>A4</td>
+                                </tr>
+                                <tr>
+                                    <td>Data produkcji:</td>
+                                    <td>2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Koszt wynajmu:</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>Kaucja</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <td>Liczba drzwi:</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Typ:</td>
+                                    <td>Sedan</td>
+                                </tr>
+                                <tr>
+                                    <td>Pojemność:</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <td>Paliwo:</td>
+                                    <td>diesel</td>
+                                </tr>
+                                <tr>
+                                    <td>Klimatyzacja:</td>
+                                    <td>tak</td>
+                                </tr>
+                                <tr>
+                                    <td>Nawigacja:</td>
+                                    <td>tak</td>
+                                </tr>
+                                <tr>
+                                    <td>Napęd:</td>
+                                    <td>przód</td>
+                                </tr>
+                                <tr>
+                                    <td>Tapicerka:</td>
+                                    <td>welurowa</td>
+                                </tr>
+                                <tr>
+                                    <td>Moc:</td>
+                                    <td>250</td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Focus -->
+    <div class="modal fade product_view" id="focus" data-backdrop="false">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                    <h3 class="modal-title">Ford Focus</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 product_img">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/focus/focus3.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/focus/focus1.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/images/focus/focus2.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="col-md-6 product_content">
+
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+
+                            </div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>Marka:</td>
+                                    <td>Ford</td>
+                                </tr>
+                                <tr>
+                                    <td>Model:</td>
+                                    <td>Focus</td>
+                                </tr>
+                                <tr>
+                                    <td>Data produkcji:</td>
+                                    <td>2010</td>
+                                </tr>
+                                <tr>
+                                    <td>Koszt wynajmu:</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>Kaucja</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Liczba drzwi:</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Typ:</td>
+                                    <td>Hatchback</td>
+                                </tr>
+                                <tr>
+                                    <td>Pojemność:</td>
+                                    <td>1600</td>
+                                </tr>
+                                <tr>
+                                    <td>Paliwo:</td>
+                                    <td>benzyna</td>
+                                </tr>
+                                <tr>
+                                    <td>Klimatyzacja:</td>
+                                    <td>tak</td>
+                                </tr>
+                                <tr>
+                                    <td>Nawigacja:</td>
+                                    <td>nie</td>
+                                </tr>
+                                <tr>
+                                    <td>Napęd:</td>
+                                    <td>przód</td>
+                                </tr>
+                                <tr>
+                                    <td>Tapicerka:</td>
+                                    <td>welurowa</td>
+                                </tr>
+                                <tr>
+                                    <td>Moc:</td>
+                                    <td>80</td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kia -->
+    <div class="modal fade product_view" id="kia" data-backdrop="false">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                    <h3 class="modal-title">Kia Ceed</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 product_img">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/kia/kia1.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/kia/kia2.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/images/kia/kia3.jpg" class="img-responsive">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="col-md-6 product_content">
+
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+
+                            </div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>Marka:</td>
+                                    <td>Kia</td>
+                                </tr>
+                                <tr>
+                                    <td>Model:</td>
+                                    <td>Ceed</td>
+                                </tr>
+                                <tr>
+                                    <td>Data produkcji:</td>
+                                    <td>2013</td>
+                                </tr>
+                                <tr>
+                                    <td>Koszt wynajmu:</td>
+                                    <td>300</td>
+                                </tr>
+                                <tr>
+                                    <td>Kaucja</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Liczba drzwi:</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Typ:</td>
+                                    <td>Hatchback</td>
+                                </tr>
+                                <tr>
+                                    <td>Pojemność:</td>
+                                    <td>1600</td>
+                                </tr>
+                                <tr>
+                                    <td>Paliwo:</td>
+                                    <td>benzyna</td>
+                                </tr>
+                                <tr>
+                                    <td>Klimatyzacja:</td>
+                                    <td>tak</td>
+                                </tr>
+                                <tr>
+                                    <td>Nawigacja:</td>
+                                    <td>nie</td>
+                                </tr>
+                                <tr>
+                                    <td>Napęd:</td>
+                                    <td>przód</td>
+                                </tr>
+                                <tr>
+                                    <td>Tapicerka:</td>
+                                    <td>welurowa</td>
+                                </tr>
+                                <tr>
+                                    <td>Moc:</td>
+                                    <td>120</td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

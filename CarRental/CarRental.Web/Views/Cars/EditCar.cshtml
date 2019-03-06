@@ -1,0 +1,90 @@
+﻿@model CarRental.BLL.Entities.Cars 
+@{
+    ViewData["Title"] = "Edytuj";
+}
+
+<br />
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="form-group">
+
+            @Html.LabelFor(x => x.Brand, "Marka", new { @class = "col-4" })
+            @Html.TextBox("car.Brand", Model.Brand, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+
+            @Html.LabelFor(x => x.CarModel, "Model", new { @class = "col-4" })
+            @Html.TextBox("car.CarModel", Model.CarModel, new { @Style = "background:#cccccc;" })
+
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.ProdDate, "Data produkcji", new { @class = "col-4" })
+            @Html.TextBox("car.ProdDate", Model.ProdDate, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.RentPrice, "Koszt wynajmu", new { @class = "col-4" })
+            @Html.TextBox("car.RentPrice", Model.RentPrice, new { @Style = "background:#cccccc;" })
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Bail, "Kaucja", new { @class = "col-4" })
+            @Html.TextBox("car.Bail", Model.Bail, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Doors, "Liczba drzwi", new { @class = "col-4" })
+            @Html.TextBox("car.Doors", Model.Doors, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Type, "Typ", new { @class = "col-4" })
+            @Html.TextBox("car.Type", Model.Type, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Capacity, "Pojemność", new { @class = "col-4" })
+            @Html.TextBox("car.Capacity", Model.Capacity, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Fuel, "Paliwo", new { @class = "col-4" })
+            @Html.TextBox("car.Fuel", Model.Fuel, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Clim, "Klimatyzacja", new { @class = "col-4" })
+            @Html.TextBox("car.Clim", Model.Clim, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Navi, "Nawigacja", new { @class = "col-4" })
+            @Html.TextBox("car.Navi", Model.Navi, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.DriveType, "Napęd", new { @class = "col-4" })
+            @Html.TextBox("car.DriveType", Model.DriveType, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Upholestry, "Tapicerka", new { @class = "col-4" })
+            @Html.TextBox("car.Upholestry", Model.Upholestry, new { @Style = "background:#cccccc;" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Horsepower, "Moc", new { @class = "col-4" })
+            @Html.TextBox("car.Horsepower", Model.Horsepower, new { @Style = "background:#cccccc;" })
+        </div>
+
+    </div>
+        <input type="submit" value="Edytuj" id="edit" class="btn btn-success" />
+        @Html.ActionLink("Wróć", "Index", "Cars", (object)null, new { @class = "btn btn-primary" })
+    }
+</div>

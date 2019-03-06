@@ -1,0 +1,151 @@
+﻿@inject SignInManager<CarRental.BLL.Entities.User> SignInManager
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Setup Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/StyleSheet.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+
+    </environment>
+  
+       
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Shine of Divine</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Śledzenie naprawy", "OrderInfo", "Orders")</li>
+                <li>  @Html.ActionLink("Likwidacja szkód", "LikwidacjaSzkod", "Home")</li>
+                <li> @Html.ActionLink("Pomoc drogowa", "PomocDrogowa", "Home")</li>
+
+
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Naprawy
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Blacharsko-lakiernicze", "BlachLak", "Home")</li>
+                        <li>@Html.ActionLink("Mechaniczne", "Mechaniczne", "Home")</li>
+
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Wypożyczalnia", "CarRent", "Cars")</li>
+                <li>@Html.ActionLink("O nas", "About", "Home")</li>
+                <li>@Html.ActionLink("Galeria", "Gallery", "Home")</li>
+                <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                @await Html.PartialAsync("_LoginPartial")
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Menu
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Samochody", "Index", "Cars")</li>
+                            <li>@Html.ActionLink("Klienci", "Index", "Customers")</li>
+                            <li>@Html.ActionLink("Naprawy", "Index", "Orders")</li>
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </div>
+        </nav>
+        
+        <br />
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+        <hr />
+
+        <footer>
+
+            <div class="container second-portion">
+                <div class="row">
+                    <!-- Boxes de Acoes -->
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                        <div class="box">
+                            <div class="icon">
+                                <div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="info">
+                                    <h3 class="title">Godziny otwarcia</h3>
+                                    <p>
+                                        Pn-Pt: 8-18
+
+
+                                    </p>
+                                    <p>
+                                        Pomoc drogowa 24h
+                                        <br>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="space"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                        <div class="box">
+                            <div class="icon">
+                                <div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                                <div class="info">
+                                    <h3 class="title">Kontakt</h3>
+                                    <p>
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  509 917 889
+                                        <br>
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  507 100 381
+                                        <br>
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  515 958 945
+                                        <br>
+
+                                    </p>
+                                    <p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp shineofdivine@gmail.com
+                                        <br>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="space"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                        <div class="box">
+                            <div class="icon">
+                                <div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="info">
+                                    <h3 class="title">Adres</h3>
+                                    <p>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Lisia 20B, 05-270 Marki.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="space"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2019 - Wojciech Sowa</p>
+        </footer>
+
+
+
+        @RenderSection("Scripts", required: false)
+</body>
+</html>

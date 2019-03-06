@@ -1,0 +1,59 @@
+﻿<script src="~/lib/jquery/dist/jquery.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+@using CarRental.BLL.Entities
+@model List<Customers>;
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<link rel="stylesheet" href="~/css/StyleSheet.css" />
+<div id="naglowek">
+    <div class="col-md-12">
+        <h2>Klienci</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="wiersze">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Imie</th>
+                        <th>Nazwisko</th>
+                        <th>Samochód</th>
+                        <th>Opcje</th>
+
+                    </tr>
+                    @foreach (var itm in Model)
+                    {
+                        <tr>
+                            <td>@itm.Name</td>
+                            <td>@itm.Surname</td>
+                            <td>@itm.CustCarBrand @itm.CustCarModel</td>
+                            <td>
+                                @Html.ActionLink("Usuń", "DeleteCustomer", new { Id = itm.Id }, new { @class = "btn btn-danger" })
+                                @Html.ActionLink("Szczegóły", "GetCustomer", new { Id = itm.Id }, new { @class = "btn btn-warning" })
+                                @Html.ActionLink("Edytuj", "EditCustomer", new { Id = itm.Id }, new { @class = "btn btn-primary" })
+                            </td>
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="col-md-12">
+    @Html.ActionLink("Dodaj", "AddCustomer", (object)null, new { @class = "btn btn-primary" })
+</div>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

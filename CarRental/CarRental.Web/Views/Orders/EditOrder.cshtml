@@ -1,0 +1,136 @@
+﻿@model OrdersViewModel
+@{
+    ViewData["Title"] = "EditOrder";
+}
+<br />
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="form-group">
+
+                @Html.LabelFor(x => x.Order.ServiceNo, "Numer naprawy", new { @class = "col-4" })
+                @Html.TextBox("order.ServiceNo", Model.Order.ServiceNo, new { @style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(x => x.Order.CustId, "Klient", new { @class = "col-4" })
+                @Html.TextBox("order.CustID", Model.Order.CustId, new { @style = "background:#cccccc;" })
+
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.ServiceType, "Typ naprawy", new { @class = "col-4" })
+                @Html.TextBox("order.ServiceType", Model.Order.ServiceType, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Parking, "Parking", new { @class = "col-4" })
+                @Html.TextBox("order.Parking", Model.Order.Parking, new { @Style = "background:#cccccc;" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Price, "Koszt", new { @class = "col-4" })
+                @Html.TextBox("order.Price", Model.Order.Price, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date, "Data 1", new { @class = "col-4" })
+                @Html.TextBox("order.Date", Model.Order.Date, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description, "Opis 1", new { @class = "col-4" })
+                @Html.TextBox("order.Description", Model.Order.Description, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date2, "Data 2", new { @class = "col-4" })
+                @Html.TextBox("order.Date2", Model.Order.Date2, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description2, "Opis 2", new { @class = "col-4" })
+                @Html.TextBox("order.Description2", Model.Order.Description2, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date3, "Data 3", new { @class = "col-4" })
+                @Html.TextBox("order.Date3", Model.Order.Date3, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description3, "Opis 3", new { @class = "col-4" })
+                @Html.TextBox("order.Description3", Model.Order.Description3, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date4, "Data 4", new { @class = "col-4" })
+                @Html.TextBox("order.Date4", Model.Order.Date4, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description4, "Opis 4", new { @class = "col-4" })
+                @Html.TextBox("order.Description4", Model.Order.Description4, new { @Style = "background:#cccccc;" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date5, "Data 5", new { @class = "col-4" })
+                @Html.TextBox("order.Date5", Model.Order.Date5, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description5, "Opis 5", new { @class = "col-4" })
+                @Html.TextBox("order.Description5", Model.Order.Description5, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date6, "Data 6", new { @class = "col-4" })
+                @Html.TextBox("order.Date6", Model.Order.Date6, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description6, "Opis 6", new { @class = "col-4" })
+                @Html.TextBox("order.Description6", Model.Order.Description6, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date7, "Data 7", new { @class = "col-4" })
+                @Html.TextBox("order.Date7", Model.Order.Date7, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description7, "Opis 7", new { @class = "col-4" })
+                @Html.TextBox("order.Description7", Model.Order.Description7, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date8, "Data 8", new { @class = "col-4" })
+                @Html.TextBox("order.Date8", Model.Order.Date8, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description8, "Opis 8", new { @class = "col-4" })
+                @Html.TextBox("order.Description8", Model.Order.Description8, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date9, "Data 9", new { @class = "col-4" })
+                @Html.TextBox("order.Date9", Model.Order.Date9, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description9, "Opis 9", new { @class = "col-4" })
+                @Html.TextBox("order.Description9", Model.Order.Description9, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Date10, "Data 10", new { @class = "col-4" })
+                @Html.TextBox("order.Date10", Model.Order.Date10, new { @Style = "background:#cccccc;" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Order.Description10, "Opis 10", new { @class = "col-4" })
+                @Html.TextBox("order.Description10", Model.Order.Description10, new { @Style = "background:#cccccc;" })
+            </div>
+        </div>
+        <input type="submit" value="Edytuj" id="edit" class="btn btn-success" />
+        @Html.ActionLink("Wróć", "Index", "Orders", (object)null, new { @class = "btn btn-primary" })
+
+         //@Html.ActionLink("Klient", "GetCustomer", "Customers", new { Id = Model.Order.CustId }, new { @class = "btn btn-primary" })
+    }
+</div>
+

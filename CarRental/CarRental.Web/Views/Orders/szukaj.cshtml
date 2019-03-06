@@ -1,0 +1,163 @@
+﻿@model OrdersViewModel
+
+
+@{
+    ViewData["Title"] = "szukaj";
+}
+<br />
+@if (Model.Order.ServiceNo == "")
+{<h1>Brak danych na temat tej naprawy</h1> }
+else
+{
+    <div class="col-sm-5">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Naprawa
+            </div>
+            <div class="panel-body ">
+
+                <table class="table table-condensed table-summary table-borderless ">
+                    <tbody>
+
+
+                        <tr>
+                            <td class="summary-heading">Numer naprawy:</td>
+                            <td class="summary-content">@Model.Order.ServiceNo</td>
+                        </tr>
+
+                        <tr>
+                            <td class="summary-heading">Typ usługi:</td>
+                            <td>@Model.Order.ServiceType</td>
+                        </tr>
+                        <tr>
+                            <td class="summary-heading">Parking:</td>
+                            <td>@Model.Order.Parking</td>
+                        </tr>
+                        <tr>
+                            <td class="summary-heading">Koszt:</td>
+                            <td>@Model.Order.Price</td>
+                        </tr>
+
+                        @if (@Model.Order.Description != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description2 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date2</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description2</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description3 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date3</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description3</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description4 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date4</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description4</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description5 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date5</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description5</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description6 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date6</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description6</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description7 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date7</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description7</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description8 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date8</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description8</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description9 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date9</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description9</td>
+                            </tr>
+                        }
+                        @if (@Model.Order.Description10 != null)
+                        {
+                            <tr>
+                                <td class="summary-heading">Data:</td>
+                                <td>@Model.Order.Date10</td>
+                            </tr>
+                            <tr>
+                                <td class="summary-heading">Opis:</td>
+                                <td>@Model.Order.Description10</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+}
+
+
+
+
